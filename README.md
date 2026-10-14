@@ -18,7 +18,9 @@ A hands-on Retrieval-Augmented Generation (RAG) project that answers questions u
 
 ```text
 rag-handsbook-basics/
-├── RAG_Handson.ipynb
+├── README.md
+├── notebook/
+│   └── RAG_Handson.ipynb
 ├── nasa_systems_engineering_handbook.pdf  # add locally; not included in this repository
 └── chroma_db/                              # generated locally when indexing
 ```
@@ -57,7 +59,7 @@ py -m venv .venv
 
 ### 3. Install dependencies
 
-Open `RAG_Handson.ipynb` in VS Code, select the `.venv` Python kernel, and run the notebook's first installation cell:
+Open `notebook/RAG_Handson.ipynb` in VS Code, select the `.venv` Python kernel, and run the notebook's first installation cell:
 
 ```python
 %pip install -q langchain langchain-community langchain-ollama langchain-chroma langchain-text-splitters chromadb pypdf
@@ -77,7 +79,7 @@ ollama pull nomic-embed-text
 
 ### 5. Add the PDF
 
-Place `nasa_systems_engineering_handbook.pdf` in the repository root, next to the notebook. The notebook's `Corpus` variable points to that filename. If you store the PDF elsewhere, update `Corpus` to the correct path.
+Place `nasa_systems_engineering_handbook.pdf` in the repository root, next to the notebook. The notebook's `Corpus` variable points to `../nasa_systems_engineering_handbook.pdf` relative to the `notebook/` folder. If you store the PDF elsewhere, update `Corpus` to the correct path.
 
 ### 6. Run the notebook
 
